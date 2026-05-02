@@ -1,16 +1,19 @@
 {
-    "model": "claude-sonnet-4-6",
-    "permissions": {
-        "allow": [
-            "Bash(python *)",
-            "Bash(pytest *)"
-        ],
-        "deny": [
-            "Read(.env)",
-            "Read(.env.*)"
-        ]
-    },
-    "env": {
-        "PYTHONUNBUFFERED": "1"
-    }
+  "env": {
+    "PYTHONUNBUFFERED": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(pytest *)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)"
+    ],
+    "ask": [
+      "Bash(git commit *)"
+    ]
+  },
+  "model": "claude-sonnet-4-6"
 }
