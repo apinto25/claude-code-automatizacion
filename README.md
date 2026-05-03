@@ -1,6 +1,10 @@
 # Appointments API
 
-API REST para gestionar citas, construida con FastAPI y SQLite.
+## Sobre este repositorio
+
+Este repositorio forma parte del curso de LinkedIn Learning **Claude Code: Automatización del desarrollo de software**. El curso enseña a usar Claude Code como asistente de desarrollo de software: cómo interactuar con él para explorar código, hacer preguntas, recibir sugerencias y trabajar de forma más eficiente en el día a día como desarrollador.
+
+---
 
 ## Descripción general
 
