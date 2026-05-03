@@ -15,5 +15,19 @@
       "Bash(git commit *)"
     ]
   },
-  "model": "claude-sonnet-4-6"
+  "model": "claude-sonnet-4-6",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; if echo \"$f\" | grep -q '\\.py$'; then python -m black \"$f\"; fi; } 2>/dev/null || true",
+            "statusMessage": "Formatting with black..."
+          }
+        ]
+      }
+    ]
+  }
 }
