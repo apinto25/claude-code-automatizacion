@@ -44,3 +44,9 @@ This is a FastAPI + SQLAlchemy CRUD API for managing appointments, backed by SQL
 ### Testing approach
 
 Use `httpx.AsyncClient` with a FastAPI `TestClient` (or override the `get_db` dependency) to test endpoints. Keep a separate in-memory SQLite database for tests so they never touch `appointments.db`.
+
+## Git
+
+- **Branch naming:** all branches must use one of the following prefixes: `feat/*`, `fix/*`, or `refactor/*`. No other prefixes are allowed.
+- **Protected main branch:** direct commits to `main` are strictly prohibited. All changes must go through a feature branch and be merged via pull request.
+- **Tests before every commit:** the full test suite (`uv run pytest`) must pass before any commit is finalized. Never commit with failing tests.
